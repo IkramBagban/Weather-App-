@@ -1,0 +1,357 @@
+
+
+    .ajax-section {
+      margin: 70px 0  ;
+    
+    }
+    
+    .ajax-section .cities {
+      display: grid;
+      grid-gap: 32px 20px;
+      /* grid-template-columns: repeat(3, 3fr); */
+    }
+    
+    .ajax-section .city {
+      position: relative;
+      padding: 40px 10%;
+      border-radius: 20px;
+      background: #1c584b;
+      color: var(--text_med);
+      width: 300px;
+      margin:0 30px
+    }
+    
+    .ajax-section .city::after {
+      content: '';
+      width: 90%;
+      height: 50px;
+      position: absolute;
+      bottom: -12px;
+      left: 5%;
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 20px;
+      background: var(--text_light);
+    }
+    
+    .ajax-section figcaption {
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .ajax-section .city-temp {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: var(--text_dark);
+    }
+    
+    .ajax-section .city sup {
+      font-size: 0.5em;
+    }
+    
+    .ajax-section .city-name sup {
+      padding: 0.2em 0.6em;
+      border-radius: 30px;
+      color: var(--text_light);
+      background: var(--orange);
+    }
+    
+    .ajax-section .city-icon {
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+    }
+    
+    @media screen and (max-width: 1000px) {
+      body {
+        padding: 30px;
+      }
+      
+      .ajax-section .cities {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media screen and (max-width: 700px) {
+      .heading,
+      .ajax-section .city-temp {
+        font-size: 3rem;
+      }
+      
+      .ajax-section {
+        margin-top: 20px;
+      }
+      
+      .top-banner form {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .top-banner form input,
+      .top-banner form button {
+        width: 100%;
+      }
+    
+      .top-banner form button {
+        margin: 20px 0 0 0;
+      }
+      
+      .top-banner form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 10px;
+      }
+    
+      .ajax-section .cities {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media screen and (max-width: 500px) {
+      body {
+        padding: 15px;
+      }
+      
+      .ajax-section .cities {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    /* ========= */
+    /* Card.css */
+.ajax-section {
+  /* background-color: #f5f5f5; */
+  padding: 1rem;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease-in-out;
+}
+
+.ajax-section:hover {
+  transform: translateY(-15px);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cities {
+  list-style: none;
+  padding: 0;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.city-temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.city-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #888;
+}
+/* ===================================================================================================================================
+===================================================================================================================================
+=================================================================================================================================== */
+
+
+.ajax-section {
+  margin: 70px 0;
+}
+
+.ajax-section .cities {
+  display: grid;
+  grid-gap: 32px 20px;
+}
+
+.ajax-section .city {
+  position: relative;
+  padding: 40px 10%;
+  border-radius: 20px;
+  /* background: #07e0a6; */
+  background-color: #ceb4b4;
+  color: var(--text_med);
+  width: 300px;
+  margin: 0 30px;
+}
+
+.ajax-section .city::after {
+  content: '';
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: var(--text_light);
+}
+
+.ajax-section figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ajax-section .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+.ajax-section .city sup {
+  font-size: 0.5em;
+}
+
+.ajax-section .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background: var(--orange);
+}
+
+.ajax-section .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 30px;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heading,
+  .ajax-section .city-temp {
+    font-size: 3rem;
+  }
+
+  .ajax-section {
+    margin-top: 20px;
+  }
+
+  .top-banner form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-banner form input,
+  .top-banner form button {
+    width: 100%;
+  }
+
+  .top-banner form button {
+    margin: 20px 0 0 0;
+  }
+
+  .top-banner form .msg {
+    position: static;
+    max-width: none;
+    min-height: 0;
+    margin-top: 10px;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* card.css */
+
+.ajax-section {
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.ajax-section:hover {
+  transform: translateY(-15px);
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.cities {
+  list-style: none;
+  padding: 0;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #F0F6F9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.city-temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.city-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #888;
+}
