@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import "../App.css";
-import './search.css'
+import "./search.css";
 import Card from "../card/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { findWeather } from "../../store/cardSlice";
@@ -10,18 +10,25 @@ const Search = () => {
   const [enteredCity, setEnteredCity] = useState("");
   const dispatch = useDispatch();
 
-
   const apiKey = "8ba84efae4b9ba8ad40626052cd17a09";
   const cards = useSelector((state) => state.card);
 
   const searchHandler = async (e) => {
     e.preventDefault();
-    const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${enteredCity}&appid=${apiKey}&units=metric`
-    );
-    console.log("url", response.data);
-    dispatch(findWeather(response.data));
-    setEnteredCity("");
+    if (!enteredCity) {
+      return alert("Please enter a city name");
+    }
+    try {
+      const response = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${enteredCity}&appid=${apiKey}&units=metric`,
+      );
+      console.log("url", response.data);
+      dispatch(findWeather(response.data));
+      setEnteredCity("");
+    } catch (e) {
+      console.log("error", e);
+      alert("Please enter a valid city name");
+    }
   };
 
   return (
